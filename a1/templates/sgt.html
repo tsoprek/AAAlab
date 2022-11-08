@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content%}
+<div class="col-12 col-lg-9 col-xl-10">
+<div class="section">
+    <div class="row">
+        <div class="col-xl-8">
+            <div class="panel panel--loose panel--raised base-margin-bottom">
+                <h2 class="header__title">Welcome to RADIUS configuration</h2>
+                    <hr>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div>
+                        <input type="hidden" id="ssh-cfg" name="ssh-cfg" value="no"><input class="checkbox" type="checkbox" id="ssh-cfg" name="ssh-cfg" value="yes">
+                        <label for="ssh-cfg"> Configure SHH</label><br><br>
+                        <input type="hidden" id="rm-aaa" name="rm-aaa" value="no"><input class="checkbox" type="checkbox" id="rm-aaa" name="rm-aaa" value="yes">
+                        <label for="rm-aaa"> Remove AAA config before applying new configuration</label><br><br>
+                        <input type="hidden" id="tacacs" name="tacacs" value="no"><input class="checkbox" type="checkbox" id="tacacs" name="tacacs" value="yes">
+                        <label class="checkbox" for="tacacs"> Include TACACS configuration</label><br>
+                    </div>
+                    <h3 class="subtitle base-margin-top text-bold">NAD configuration</h3>
+                    <div >
+                        <table>
+                          <tr>
+                            <th style="width:80px"></th>
+                            <th style="width:80px"></th>
+                          </tr>
+                          <tr>
+                            <td  class=" text-left text-bold qtr-margin-top text-size-14">Server1</td>
+                            <td> <input style="border-radius: 5px" type="text" class=" qtr-margin-top text-size-14" id="server1" name="server1" required></td>
+                          </tr>
+                          <tr>
+                            <td class=" text-bold qtr-margin-top text-size-14" >Server2</td>
+                            <td><input type="text" style="border-radius: 5px" class=" qtr-margin-top text-size-14" id="server2" name="server2"></td>
+                          </tr>
+                          <tr>
+                            <td class=" text-bold qtr-margin-top text-size-14">Server3</td>
+                            <td><input style="border-radius: 5px" type="text" class=" qtr-margin-top text-size-14 " id="server3" name="server3" value=""></td>
+                          </tr>
+                          <tr>
+                            <td class=" text-bold qtr-margin-top text-size-14 ">IP - vrf</td>
+                            <td><input style="border-radius: 5px" type="text" class=" qtr-margin-top text-size-14 " id="vrf" name="vrf" value="Mgmt-vrf"></td>
+                          </tr>
+                          <tr>
+                            <td class=" text-bold qtr-margin-top text-size-14 ">Src - if</td>
+                            <td><input style="border-radius: 5px" type="text" class=" qtr-margin-top text-size-14 " id="source-if" name="source-if" value="Gig0/0"></td>
+                          </tr>
+                          <tr>
+                            <td class=" text-bold qtr-margin-top text-size-14 ">Dot1x If</td>
+                            <td><input style="border-radius: 5px" type="text" class=" qtr-margin-top text-size-14 text-align-right" id="dot1x-if" name="dot1x-if" value=""></td>
+                          </tr>
+                          <tr>
+                            <td class=" text-bold qtr-margin-top text-size-14">NAD's</td>
+                            <td><input style="border-radius: 5px" type="text" class=" qtr-margin-top text-size-14 " name="device-list" id="device-list" required></td>
+                          </tr>
+                        </table>
+                    </div>
+                        <button class="btn base-margin-top" type="submit" value="Submit">Configure</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock content%}

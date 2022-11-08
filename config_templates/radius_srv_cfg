@@ -1,0 +1,5 @@
+radius server aLabServer_{0}
+ address ipv4 {0} auth-port 1812 acct-port 1813
+ key cisco
+aaa server radius dynamic-author
+ client {0} server-key cisco

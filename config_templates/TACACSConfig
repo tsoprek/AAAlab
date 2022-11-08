@@ -1,0 +1,20 @@
+aaa new-model
+aaa group server tacacs+ TACGR
+ server name TACACSsrv
+ ip vrf forwarding Mgmt-vrf
+ ip tacacs source-interface GigabitEthernet0/0
+aaa authentication login REMOTE group TACGR
+aaa authorization exec REMOTE group TACGR
+aaa session-id common
+ip tacacs source-interface GigabitEthernet0/0
+tacacs server TACACSsrv
+ address ipv4 10.48.26.65
+ key cisco
+line vty 0 4
+ authorization exec REMOTE
+ login authentication REMOTE
+ transport input all
+line vty 5 15
+ authorization exec REMOTE
+ login authentication REMOTE
+ transport input all

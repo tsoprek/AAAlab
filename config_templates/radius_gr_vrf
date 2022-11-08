@@ -1,0 +1,3 @@
+aaa group server radius aLab_Group
+ ip vrf forwarding {0}
+ ip radius source-interface {1}

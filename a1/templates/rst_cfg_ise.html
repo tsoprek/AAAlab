@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content%}
+<div class="col-12 col-lg-9 col-xl-10">
+<div class="section">
+    <div class="row">
+        <div class="col-xl-8">
+            <div class="panel panel--loose panel--raised base-margin-bottom">
+                <h2 class="subtitle">Reset Config ISE</h2>
+                <form method="POST">
+                    {% csrf_token %}
+                <hr>
+                    <p class="text qtr-margin-top">Add devices in csv format</p>
+                    <div class="section">
+                        <div class="row">
+                            <div class="qtp-margin-top"> </div>
+                            <lable for="device-list" class="checkbox qtp-margin-top text-left" >Device list  </lable><br>
+                            <br>
+                            <textarea style="border-radius: 5px" class="textarea qtp-margin-top qtr-margin-left " name="device-list" id="device-list" row="8" cols="50" required></textarea>
+                        </div>
+                        <div class="col-6 col-lg-2 base-margin-top qtr-margin-left">
+                        <button class="btn btn--danger" >Reset Config</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

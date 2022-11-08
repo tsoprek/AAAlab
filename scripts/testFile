@@ -1,0 +1,17 @@
+This is where i would like to have server 1 {v1}
+This is where i would like to have server 2 {v2}
+
+                        <lable for="server1" class="label text-left qtr-margin-top text-size-14">Server 1</lable><br>
+                        <input type="text" class="label qtr-margin-top text-size-14" id="server1" name="server1" required>
+                        <lable for="server2" class="label text-left qtr-margin-top  text-size-14 ">Server 2</lable><br>
+                        <input type="text" class="label qtr-margin-top text-size-14" id="server2" name="server2">
+                        <lable for="server3" class="label qtr-margin-top text-size-14 ">Server 3</lable><br>
+                        <input type="text" class="label qtr-margin-top text-size-14 " id="server3" name="server3" value="">
+                        <lable for="vrf" class="label qtr-margin-top text-size-14 ">Src vrf</lable><br>
+                        <input type="text" class="label qtr-margin-top text-size-14 " id="vrf" name="vrf" value="Mgmt-vrf">
+                        <lable for="source-if" class="label qtr-margin-top text-size-14 ">Src inf</lable><br>
+                        <input type="text" class="label qtr-margin-top text-size-14 text-align-right" id="dot1x-if" name="dot1x-if" value="none">
+                        <lable for="dot1x-if" class="label qtr-margin-top text-size-14 " >dot1x inf</lable><br>
+                        <input type="text" class="label qtr-margin-top text-size-14 " id="source-if" name="source-if" value="gig0/0">
+                        <lable for="device-list" class="label qtr-margin-top text-size-14"  >NAD list</lable>
+                        <input type="text" class="label qtr-margin-top text-size-14 " " name="device-list" id="device-list" required rows="2" cols="5">

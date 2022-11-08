@@ -1,0 +1,12 @@
+ip domain-name example.com
+ip routing
+ip route 0.0.0.0 0.0.0.0 192.168.255.1
+ip default-gateway 192.168.255.1
+line vty 0 4
+login local
+password cisco
+username cisco priv 15 password cisco
+enable password cisco
+crypto key generate rsa modulus 2048
+no ip domain-lookup
+

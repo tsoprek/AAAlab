@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content%}
+
+<div class="col-12 col-lg-9 col-xl-10">
+<div class="section">
+    <div class="row">
+        <div class="col-xl-8">
+            <div class="panel panel--loose panel--raised base-margin-bottom">
+                <h2 class="subtitle">Planed enhancements</h2>
+                <hr>
+                 <ul>
+                     <li class="sidebar__item">Add option to change default interface</li>
+                     <li class="sidebar__item">Add option to change default username/password</li>
+                     <li class="sidebar__item">Add option for SSH configuration</li>
+                     <li class="sidebar__item">API to add NAD to ISE</li>
+                     <li class="sidebar__item">Personal templates</li>
+                </ul>
+                <div>
+                    <h3 class="subtitle half-margin-top">Default settings</h3>
+                    <ul>
+                    <li class="sidebar__item">Username:cisco</li>
+                    <li class="sidebar__item">Password: cisco</li>
+                    <li class="sidebar__item">Enable password: cisco!123</li>
+                    <li class="sidebar__item">Interface: Gig0/0</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

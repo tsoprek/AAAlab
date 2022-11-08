@@ -1,0 +1,22 @@
+aaa new-model
+aaa group server radius RADIUSgrp
+ server name RADIUSsrv
+ ip vrf forwarding Mgmt-vrf
+aaa authentication dot1x default group RADIUSgrp local
+aaa authorization network default group RADIUSgrp local
+aaa authorization network CTS group RADIUSgrp
+aaa accounting update newinfo periodic 600
+aaa accounting dot1x default start-stop group RADIUSgrp
+cts authorization list CTS
+aaa server radius dynamic-author
+ client 10.48.26.74 server-key cisco
+aaa session-id common
+radius-server attribute 6 on-for-login-auth
+radius-server attribute 8 include-in-access-req
+radius-server attribute 25 access-request include
+radius server RADIUSsrv
+ address ipv4 10.48.26.74 auth-port 1812 acct-port 1813
+ pac key cisco
+dot1x system-auth-control
+radius-server deadtime 5
+radius-server dead-criteria time 10 tries 3

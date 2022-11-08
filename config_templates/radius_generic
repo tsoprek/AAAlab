@@ -1,0 +1,11 @@
+aaa new-model
+aaa authentication dot1x default group radius local
+aaa authorization network default group radius local
+aaa accounting update newinfo periodic 600
+aaa accounting dot1x default start-stop group radius
+radius-server attribute 6 on-for-login-auth
+radius-server attribute 8 include-in-access-req
+radius-server attribute 25 access-request include
+dot1x system-auth-control
+radius-server deadtime 5
+radius-server dead-criteria time 10 tries 3
